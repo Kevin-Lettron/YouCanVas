@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouCanvas</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header><h1>YouCanvas</h1></header>
+        <main>
+            <div class="size">
+                <div class="TagSize">
+              
+                    <h3>Taille de l'étiquette :</h3> 
+                    <label for="largeurE">Largeur étiquette :</label>
+                    <input type="number" name="largeurE" id="largeurE" > <br><br>
+                    <label for="hauteurE" >Hauteur étiquette :</label>
+                    <input type="number" name="hauteurE"id="hauteurE"><br><br>
+                    <input type="submit" name="envoiE" onclick="SizeE()" value="afficher">
+                
+                </div>
+                <div class="police">
+                    <h4>Police :</h4>
+                    <label for="FontSize">Taille de la police : <br>(modifie la police de tous les éléments)<br></label>
+                    <input type="number" name="FontSize" id="tailleP"><br><br>
+                    <input type="submit" name="envoiP" onclick="SizeP()" value="afficher"><br><br>
+                    <label for="FontSizee">Police pour chaque éléments :</label>
+                    <input type="submit" name="fontSizee" onclick="display()" value="choisir">
+                </div>
+                <div class="codeEan">
+                    <h4>Code Ean :</h4>
+                    <label for="tailleEA">Taille code Ean :</label>
+                    <select name="tailleEA" id="SizeEa">
+                        <option value="1">Taille 1</option>
+                        <option value="2">taille 2</option>
+                        <option value="3">taille 3</option>'
+                    </select>
+                    <br><br><input type="submit" value="afficher" onclick="SizeEa()">
+                </div>
+                <div class="envoiDo">
+                    <h4>Envois de l'étiquette :</h4>
+                    <input type="submit" name="envoiP" onclick="envoiDo()">
+                </div>
+            </div>
+            <img class="arrow" src="images/arrow.svg" alt="fleche" width="50px" height="50px">
+            <div class="etiquette">
+                <canvas id='zone'  width="380" height="480" >Désolé votre navigateur ne prend pas en charge les canvas</canvas>
+            </div>
+    <div class="modal" id="myModal">
+        <div class="modalcontent">
+            <span class="close" id="close">&times;</span>
+            <center><h4><u>Choix de la taille :</u></h4></center>
+
+            <label for="FontSize">Taille du nom :</label>
+            <input type="number" name="FontSize" id="tailleN"><br><br>
+
+            <label for="FontSize">Taille d'attribut :</label>
+            <input type="number" name="FontSize" id="tailleA"><br><br>
+
+            <label for="FontSize">Taille du prix :</label>
+            <input type="number" name="FontSize" id="taillePr"><br><br>
+
+            <label for="FontSize">Taille de la référence :</label>
+            <input type="number" name="FontSize" id="tailleR"><br><br>
+            <input type="submit" name="envoiP" onclick="SizePo()" value="afficher les polices"><br><br>
+
+        </div>
+    </div>
+
+
+        </main>
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/elements.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>  
